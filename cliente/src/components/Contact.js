@@ -2,7 +2,6 @@ import React from "react";
 import Icon from "./Icon";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import ContactForm from "./ContactForm";
 import { company } from "../data/company";
 
 // Mapa con la ubicación real publicada (San Antonio de Pichincha, Quito).
@@ -16,11 +15,12 @@ export default function Contact() {
         <SectionHeading
           kicker="Contacto"
           title="Hablemos de tu proyecto eléctrico"
-          description="Escríbenos por WhatsApp, llámanos o completa el formulario. Respondemos personalmente en horario de atención."
+          description="Escríbenos por WhatsApp o llámanos. Respondemos personalmente en horario de atención."
           id="contact-title"
         />
 
         <div className="lp-contact-grid">
+          {/* Información de contacto (ocupa el espacio del antiguo formulario). */}
           <Reveal className="lp-contact-info">
             <div className="lp-contact-card">
               <h3>{company.name}</h3>
@@ -44,6 +44,18 @@ export default function Contact() {
               </div>
 
               <div className="lp-info-row">
+                <Icon name="whatsapp" size={20} />
+                <div>
+                  <strong>WhatsApp</strong>
+                  <p>
+                    <a href={company.whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      {company.phone}
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="lp-info-row">
                 <Icon name="clock" size={20} />
                 <div>
                   <strong>Horario de atención</strong>
@@ -58,18 +70,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <a
-                className="lp-btn lp-btn-whatsapp lp-btn-block"
-                href={company.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon name="whatsapp" size={20} /> Escribir por WhatsApp
-              </a>
-
               {/* TODO: Agregar correo oficial y redes cuando la empresa los confirme. */}
             </div>
+          </Reveal>
 
+          {/* Mapa existente: se conserva tal cual (misma integración y coordenadas). */}
+          <Reveal delay={100} className="lp-contact-info">
             <div className="lp-map-wrapper">
               <iframe
                 title={`Mapa de ubicación de ${company.name} en San Antonio de Pichincha, Quito`}
@@ -81,10 +87,6 @@ export default function Contact() {
                 Ver mapa ampliado <span aria-hidden="true">→</span>
               </a>
             </div>
-          </Reveal>
-
-          <Reveal delay={100}>
-            <ContactForm />
           </Reveal>
         </div>
       </div>
