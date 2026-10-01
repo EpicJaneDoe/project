@@ -5,8 +5,9 @@ import SectionHeading from "./SectionHeading";
 import { company } from "../data/company";
 
 // Mapa con la ubicación real publicada (San Antonio de Pichincha, Quito).
-const MAP_SRC = `https://www.openstreetmap.org/export/embed.html?bbox=-78.4603%2C-0.1709%2C-78.4303%2C-0.1409&layer=mapnik&marker=${company.map.lat}%2C${company.map.lng}`;
-const MAP_LINK = `https://www.openstreetmap.org/?mlat=${company.map.lat}&mlon=${company.map.lng}#map=15/${company.map.lat}/${company.map.lng}`;
+// Integración sencilla de Google Maps (embed sin API key) con marcador sobre el negocio.
+const MAP_SRC = `https://maps.google.com/maps?q=${company.map.lat},${company.map.lng}&z=15&hl=es&output=embed`;
+const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${company.map.lat},${company.map.lng}`;
 
 export default function Contact() {
   return (
