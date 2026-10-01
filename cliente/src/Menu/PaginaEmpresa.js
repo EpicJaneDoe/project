@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BrandLogo from '../components/BrandLogo';
 
 function PaginaEmpresa({ eyebrow, title, description, children, cta = 'Solicitar asesoría' }) {
   const sharedContent = (
@@ -40,7 +41,7 @@ function PaginaEmpresa({ eyebrow, title, description, children, cta = 'Solicitar
           </Link>
         </div>
         <div className="signal-card" aria-label="A G. Electric Solutions Ecuador">
-          <span className="signal-mark" aria-hidden="true">AG</span>
+          <BrandLogo className="signal-logo" />
           <div>
             <strong>A G. ELECTRIC</strong>
             <span>SOLUTIONS ECUADOR</span>

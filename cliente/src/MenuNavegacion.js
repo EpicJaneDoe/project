@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import BrandLogo from './components/BrandLogo';
 
 function MenuNavegacion() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -55,7 +56,7 @@ function MenuNavegacion() {
     <nav ref={navRef} className="site-nav" aria-label="Navegación principal">
       <div className="nav-inner">
         <Link className="brand" to="/bienvenida" onClick={closeMenu}>
-          <span className="brand-symbol">AG</span>
+          <BrandLogo className="brand-logo--nav" />
           <span><strong>A G. ELECTRIC</strong><small>SOLUTIONS ECUADOR</small></span>
         </Link>
         <button className={`mobile-toggle ${mobileOpen ? 'is-open' : ''}`} type="button" onClick={() => setMobileOpen(!mobileOpen)} aria-expanded={mobileOpen} aria-controls="main-navigation" aria-label={mobileOpen ? 'Cerrar navegación' : 'Abrir navegación'}>

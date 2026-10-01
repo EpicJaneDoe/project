@@ -1,4 +1,5 @@
 import React from "react";
+import BrandLogo from "./BrandLogo";
 import Icon from "./Icon";
 import { company } from "../data/company";
 
@@ -9,9 +10,7 @@ export default function Footer() {
       <div className="lp-container lp-footer-grid">
         <div>
           <a className="lp-brand" href="#inicio">
-            <span className="lp-brand-symbol" aria-hidden="true">
-              <Icon name="bolt" size={20} />
-            </span>
+            <BrandLogo className="brand-logo--nav" />
             <span className="lp-brand-text">
               <strong>A G. ELECTRIC</strong>
               <small>SOLUTIONS ECUADOR</small>

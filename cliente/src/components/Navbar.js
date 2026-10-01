@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import BrandLogo from "./BrandLogo";
 import Icon from "./Icon";
 import { company } from "../data/company";
 
@@ -35,9 +35,7 @@ export default function Navbar() {
     <header className={`lp-nav ${scrolled ? "is-scrolled" : ""}`}>
       <div className="lp-nav-inner">
         <a className="lp-brand" href="#inicio" onClick={() => setMobileOpen(false)}>
-          <span className="lp-brand-symbol" aria-hidden="true">
-            <Icon name="bolt" size={20} />
-          </span>
+          <BrandLogo className="brand-logo--nav" />
           <span className="lp-brand-text">
             <strong>A G. ELECTRIC</strong>
             <small>SOLUTIONS ECUADOR</small>
