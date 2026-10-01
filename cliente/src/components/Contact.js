@@ -4,20 +4,21 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { company } from "../data/company";
 
-// Mapa con la ubicación real publicada (San Antonio de Pichincha, Quito).
-// Integración sencilla de Google Maps (embed sin API key) que identifica al
-// negocio por su nombre + dirección reales (no solo coordenadas genéricas),
-// de modo que el marcador y la ficha correspondan a "A G. Electric Solutions Ecuador".
-// Si en el futuro se dispone del Place ID oficial (company.map.placeId), la
-// integración pasa automáticamente a usarlo: es la referencia inequívoca del lugar.
+// Mapa con la ubicación del negocio identificado por su Place ID oficial de
+// Google Maps (company.map.placeId): es la referencia principal e inequívoca
+// del establecimiento, de modo que el marcador y la ficha correspondan a
+// "A G. Electric Solutions Ecuador" (no a una dirección genérica).
+// La integración sigue siendo el embed sencillo de Google Maps sin API key.
+// Si algún día el Place ID no estuviera definido, se usa como respaldo la
+// dirección/coordenadas reales ya publicadas en company.map.
 const PLACE_REF = company.map.placeId
   ? `place_id:${company.map.placeId}`
   : `${company.map.placeQuery} (${company.map.lat},${company.map.lng})`;
 
 const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(PLACE_REF)}&ll=${company.map.lat},${company.map.lng}&z=16&hl=es&output=embed`;
-// Enlace directo a Google Maps usando la URL oficial de búsqueda de lugares
-// (Maps URLs for Places): con Place ID abre la ficha exacta del negocio; sin
-// él, busca el nombre + dirección del negocio junto a sus coordenadas reales.
+// Enlace directo a Google Maps usando la URL oficial de fichas de lugares
+// (Maps URLs for Places): abre directamente la ficha/ubicación asociada al
+// Place ID del negocio en una pestaña nueva.
 const MAP_LINK = company.map.placeId
   ? `https://www.google.com/maps/place/?q=place_id:${company.map.placeId}`
   : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.map.placeQuery)}&center=${company.map.lat},${company.map.lng}`;
