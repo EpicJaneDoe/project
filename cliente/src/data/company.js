@@ -30,6 +30,12 @@ export const company = {
     lat: -0.1559,
     lng: -78.4453,
     query: "San Antonio de Pichincha, Quito, Ecuador",
+    // Place ID oficial del negocio en Google Maps (Google Business Profile).
+    // Se usará en cuanto la empresa lo proporcione. NO inventar un valor.
+    // Ejemplo de formato: "ChIJN1t_tDeuEmsRUsoyG83frY4".
+    placeId: "",
+    // Query que identifica el lugar como negocio (nombre + dirección reales).
+    placeQuery: "A G. Electric Solutions Ecuador, Calle Juana Engler y Pasaje Los Pinos S1-03 y, 170311 Quito, Ecuador",
   },
 };
 
