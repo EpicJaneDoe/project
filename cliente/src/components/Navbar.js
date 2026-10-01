@@ -52,6 +52,17 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
+          {/* Botón "Contáctanos por WhatsApp" integrado en el menú fijo. */}
+          <a
+            className="lp-nav-cta lp-btn-whatsapp"
+            href={company.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+          >
+            <Icon name="whatsapp" size={18} /> Contáctanos por WhatsApp
+          </a>
         </nav>
 
         <div className="lp-nav-actions">
