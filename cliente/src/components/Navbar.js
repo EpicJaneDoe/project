@@ -66,14 +66,6 @@ export default function Navbar() {
         </nav>
 
         <div className="lp-nav-actions">
-          <a
-            className="lp-nav-phone"
-            href={`tel:${company.phoneRaw}`}
-            aria-label={`Llamar al ${company.phone}`}
-          >
-            <Icon name="phone" size={18} />
-            <span>{company.phone}</span>
-          </a>
           <button
             type="button"
             className={`lp-burger ${mobileOpen ? "is-open" : ""}`}
