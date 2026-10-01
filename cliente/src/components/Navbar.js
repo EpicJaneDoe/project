@@ -3,7 +3,7 @@ import BrandLogo from "./BrandLogo";
 import Icon from "./Icon";
 import { company } from "../data/company";
 
-// Navbar de la landing: enlaces por ancla + CTA "Solicitar cotización".
+// Navbar de la landing: enlaces por ancla.
 // En rutas internas (otras páginas) los enlaces vuelven a "/" con el hash.
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -52,9 +52,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a className="lp-nav-cta" href="#contacto" onClick={() => setMobileOpen(false)}>
-            Solicitar cotización
-          </a>
         </nav>
 
         <div className="lp-nav-actions">

@@ -24,9 +24,6 @@ export default function Hero() {
             San Antonio de Pichincha y Quito.
           </p>
           <div className="lp-hero-actions">
-            <a className="lp-btn lp-btn-primary" href="#contacto">
-              Solicitar cotización
-            </a>
             <a
               className="lp-btn lp-btn-whatsapp"
               href={buildWhatsAppLink(

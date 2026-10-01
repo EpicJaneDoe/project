@@ -79,7 +79,6 @@ function MenuNavegacion() {
               </li>
             ))}
           </ul>
-          <Link className="nav-cta" to="/contacto" onClick={closeMenu}>Cotizar proyecto <span aria-hidden="true">-&gt;</span></Link>
         </div>
       </div>
     </nav>
