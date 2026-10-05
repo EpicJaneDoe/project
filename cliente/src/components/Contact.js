@@ -15,7 +15,7 @@ const PLACE_REF = company.map.placeId
   ? `place_id:${company.map.placeId}`
   : `${company.map.placeQuery} (${company.map.lat},${company.map.lng})`;
 
-const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(PLACE_REF)}&ll=${company.map.lat},${company.map.lng}&z=16&hl=es&output=embed`;
+const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(company.name)}+@${company.map.lat},${company.map.lng},16z&output=embed`;
 // Enlace directo a Google Maps usando la URL oficial de fichas de lugares
 // (Maps URLs for Places): abre directamente la ficha/ubicación asociada al
 // Place ID del negocio en una pestaña nueva.
