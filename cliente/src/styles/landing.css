@@ -113,11 +113,9 @@
 
 /* ---------- TRUST BAR ---------- */
 .lp-trust { background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%); }
+/* 5 columnas = 5 elementos (el logo repetido se eliminó de este bloque). */
 .lp-trust ul { max-width: 1180px; margin: 0 auto; padding: 20px 24px; list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .lp-trust li { display: flex; align-items: center; justify-content: center; gap: 10px; color: #fff; font-weight: 800; font-size: 14.5px; }
-
-.lp-trust-brand span { white-space: nowrap; }
-.brand-logo--trust { width: 34px; height: 34px; background: #fff; }
 
 /* ---------- ABOUT ---------- */
 .lp-about-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 60px; align-items: start; }
