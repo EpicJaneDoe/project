@@ -154,7 +154,7 @@
 .lp-process { background: linear-gradient(160deg, var(--lp-black) 0%, var(--lp-gray-900) 100%); }
 .lp-process .section-heading h2 { color: #fff; }
 .lp-process .section-heading .kicker { background: rgba(122, 162, 255, .18); color: #cfe0ff; }
-.lp-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.lp-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; }
 .lp-step { position: relative; padding: 30px 24px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 16px; background: rgba(255, 255, 255, .04); transition: border-color .2s ease, background .2s ease; }
 .lp-step:hover { border-color: rgba(122, 162, 255, .55); background: rgba(122, 162, 255, .08); }
 .lp-step-number { display: inline-block; margin-bottom: 16px; color: #7ea4ff; font-size: 34px; font-weight: 900; letter-spacing: .04em; }

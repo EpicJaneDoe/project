@@ -62,6 +62,13 @@ const paths = {
       <path d="M9 12l2 2 4-4" />
     </>
   ),
+  camera: (
+    <>
+      <path d="M3 7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+      <path d="M18 9.5 21.5 7v7L18 11.5" />
+      <circle cx="8.5" cy="10.5" r="1.4" />
+    </>
+  ),
   clock: (
     <>
       <circle cx="12" cy="12" r="9" />

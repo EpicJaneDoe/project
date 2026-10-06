@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { processSteps } from "../data/services";
 
-// Timeline de 4 pasos del proceso de trabajo.
+// Timeline de 5 pasos del proceso de trabajo.
 export default function Process() {
   return (
     <section className="lp-section lp-process" aria-labelledby="process-title">
