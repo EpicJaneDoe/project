@@ -38,10 +38,10 @@ import lamiske7 from "../assets/images/proyectos/lamiske/septima.jpg";
 const projects = [
   {
     id: "casa-agave",
-    title: "Proyecto Casa Agave",
+    title: "Casa Agave",
     category: "Instalaciones eléctricas y seguridad",
     work: [
-      "Circuito de fuera.",
+      "Circuito exterior.",
       "Iluminación.",
       "Sistema de video vigilancia.",
       "Sistema contra incendios.",
@@ -50,9 +50,10 @@ const projects = [
   },
   {
     id: "motores-sauces",
-    title:
-      "Proyecto instalación de motores tipo brazo y mantenimiento preventivo de motores de cremallera en Urbanización Los Sauces, La Pampa",
+    title: "Urbanización Los Sauces – La Pampa",
     category: "Motores y automatización",
+    description:
+      "Instalación de motores tipo brazo y mantenimiento preventivo de motores de cremallera.",
     work: [
       "Instalación de motores tipo brazo.",
       "Mantenimiento preventivo de motores de cremallera.",
@@ -61,21 +62,22 @@ const projects = [
   },
   {
     id: "tienda-kaynu",
-    title: "Proyecto tienda de productos naturales Kaynu",
+    title: "Tienda Kaynu",
     category: "Iluminación y fuerza",
+    description: "Proyecto para tienda de productos naturales.",
     work: ["Sistema de iluminación y fuerza.", "Rótulos luminosos."],
     images: [kaynu1, kaynu2, kaynu3],
   },
   {
     id: "chorigol",
-    title: "Proyecto Chorigol",
+    title: "Chorigol",
     category: "Iluminación y fuerza",
     work: ["Sistema de iluminación y fuerza de todo el local."],
     images: [chorigol1, chorigol2, chorigol3],
   },
   {
     id: "la-miske",
-    title: "Proyecto La Miske",
+    title: "La Miske",
     category: "Instalaciones eléctricas y video vigilancia",
     work: [
       "Instalación del sistema de iluminación y fuerza de todo el local.",
@@ -141,6 +143,7 @@ function ProjectGallery({ project, onClose }) {
         <div className="lp-gallery-header">
           <span>{project.category}</span>
           <h3>{project.title}</h3>
+          {project.description && <p>{project.description}</p>}
         </div>
 
         <div className="lp-gallery-stage">
@@ -208,6 +211,7 @@ export default function Projects() {
               <div>
                 <span>{project.category}</span>
                 <h3>{project.title}</h3>
+                {project.description && <p>{project.description}</p>}
                 <p>{project.work.join(" ")}</p>
               </div>
             </Reveal>

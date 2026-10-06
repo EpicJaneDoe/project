@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "¿Con qué tipo de proyectos trabajan?",
-    a: "Trabajamos instalaciones eléctricas y, además, seguridad electrónica: sistemas de video vigilancia, cercos eléctricos y sistemas de seguridad. Para conocer el alcance exacto de tu proyecto —tamaño, espacio o necesidad— escríbenos y lo evaluamos contigo.",
+    a: "Trabajamos instalaciones eléctricas y, además, seguridad electrónica: sistemas de video vigilancia, cercos eléctricos y sistemas de seguridad. Estamos en Quito y nos movilizamos para atender proyectos en todo Ecuador. Para conocer el alcance exacto del tuyo —tamaño, espacio o necesidad— escríbenos y lo evaluamos contigo.",
   },
   {
     q: "¿La cotización tiene algún compromiso?",
