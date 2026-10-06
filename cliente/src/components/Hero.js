@@ -18,9 +18,10 @@ export default function Hero() {
             Instalaciones eléctricas y <em>seguridad electrónica</em>
           </h1>
           <p>
-            Servicios e instalaciones eléctricas, seguridad electrónica,
-            sistemas de video vigilancia y cercos eléctricos con atención
-            profesional en San Antonio de Pichincha y Quito.
+            Instalaciones eléctricas, iluminación y fuerza, seguridad
+            electrónica y video vigilancia. Estamos en San Antonio de
+            Pichincha, Quito, y nos movilizamos para atender proyectos en todo
+            Ecuador.
           </p>
           <div className="lp-hero-actions">
             <a

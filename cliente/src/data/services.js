@@ -62,7 +62,7 @@ export const services = [
     // TODO: Confirmar nombre oficial del servicio.
     title: "Seguridad electrónica",
     description:
-      "Instalamos sistemas de seguridad electrónica completos: cercos eléctricos, sistemas de seguridad y video vigilancia para proteger hogares, comercios e industrias con soluciones confiables.",
+      "Instalación de cercos eléctricos, sistemas de seguridad y video vigilancia para proteger hogares, comercios e industrias.",
   },
   {
     id: "video-vigilancia",
@@ -115,8 +115,8 @@ export const whyUsItems = [
   },
   {
     icon: "pin",
-    title: "Atención local",
-    text: "Estamos en San Antonio de Pichincha, cerca de sus proyectos en Quito.",
+    title: "Cobertura nacional",
+    text: "Atendemos proyectos en Quito y en diferentes ciudades y zonas del Ecuador.",
   },
   {
     icon: "shield",
@@ -130,7 +130,7 @@ export const processSteps = [
   {
     number: "01",
     title: "Contacto",
-    text: "El cliente se comunica con la empresa por WhatsApp, teléfono o el formulario web.",
+    text: "El cliente se comunica con la empresa por WhatsApp o teléfono.",
   },
   {
     number: "02",

@@ -30,7 +30,7 @@ export default function Contact() {
         <SectionHeading
           kicker="Contacto"
           title="Hablemos de tu proyecto eléctrico"
-          description="Escríbenos por WhatsApp o llámanos. Respondemos personalmente en horario de atención."
+          description="Escríbenos por WhatsApp o llámanos. Atendemos proyectos en todo Ecuador y respondemos personalmente en horario de atención."
           id="contact-title"
         />
 

@@ -30,22 +30,24 @@ export default function About() {
         <Reveal className="lp-about-copy" delay={80}>
           <SectionHeading
             kicker="Sobre nosotros"
-            title="Instalaciones eléctricas y seguridad electrónica en Quito"
+            title="Soluciones eléctricas y seguridad electrónica"
             id="about-title"
           />
           <p>
-            <strong>{company.name}</strong> es una empresa ubicada en San
-            Antonio de Pichincha, Quito, orientada a servicios relacionados con
-            instalaciones y soluciones eléctricas, además de seguridad
-            electrónica, sistemas de video vigilancia, cercos eléctricos y
-            sistemas de seguridad para hogares, comercios e industrias.
+            <strong>{company.name}</strong> es una empresa especializada en
+            soluciones eléctricas y seguridad electrónica, con sede en San
+            Antonio de Pichincha, Quito. Realizamos instalaciones y
+            soluciones eléctricas, iluminación y fuerza, sistemas de video
+            vigilancia, cercos eléctricos y sistemas de seguridad para
+            hogares, comercios e industrias.
           </p>
           <p>
             Trabajamos escuchando primero la necesidad de cada cliente:
             evaluamos el espacio, proponemos una solución clara y coordinamos
-            la ejecución del trabajo. Nuestro objetivo es que cada instalación
-            eléctrica o sistema de seguridad funcione de forma segura, ordenada
-            y confiable.
+            la ejecución del trabajo. Atendemos proyectos en diferentes
+            ciudades y zonas del Ecuador, siempre con el mismo criterio: que
+            cada instalación eléctrica o sistema de seguridad funcione de
+            forma segura, ordenada y confiable.
           </p>
 
           {/*
@@ -56,7 +58,7 @@ export default function About() {
           <ul className="lp-about-points">
             <li><Icon name="bolt" size={18} /> Instalaciones eléctricas y seguridad electrónica</li>
             <li><Icon name="shield" size={18} /> Video vigilancia, cercos eléctricos y sistemas de seguridad</li>
-            <li><Icon name="pin" size={18} /> Presencia local en Quito</li>
+            <li><Icon name="pin" size={18} /> Cobertura en Quito y todo el Ecuador</li>
           </ul>
 
           <a className="lp-btn lp-btn-dark" href="#contacto">
