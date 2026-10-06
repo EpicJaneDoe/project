@@ -43,8 +43,8 @@ function PaginaEmpresa({ eyebrow, title, description, children, cta = 'Solicitar
         <div className="signal-card" aria-label="A G. Electric Solutions Ecuador">
           <BrandLogo className="signal-logo" />
           <div>
-            <strong>A G. ELECTRIC</strong>
-            <span>SOLUTIONS ECUADOR</span>
+            <strong>A .G Electrics Solutions</strong>
+            <span>Ecuador</span>
           </div>
           <p>Energia segura. Soluciones que conectan.</p>
         </div>

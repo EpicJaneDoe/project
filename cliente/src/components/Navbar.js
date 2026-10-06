@@ -37,8 +37,8 @@ export default function Navbar() {
         <a className="lp-brand" href="#inicio" onClick={() => setMobileOpen(false)}>
           <BrandLogo className="brand-logo--nav" />
           <span className="lp-brand-text">
-            <strong>A G. ELECTRIC</strong>
-            <small>SOLUTIONS ECUADOR</small>
+            <strong>A .G Electrics Solutions</strong>
+            <small>Ecuador</small>
           </span>
         </a>
 

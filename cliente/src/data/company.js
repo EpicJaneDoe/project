@@ -15,7 +15,7 @@ export const company = {
   phone: "+593 98 342 9670",
   phoneRaw: "+593983429670",
   whatsappUrl: "https://wa.me/593983429670",
-  category: "Servicio de instalación eléctrica",
+  category: "Instalaciones eléctricas y seguridad electrónica",
   schedule: [
     { days: "Lunes a viernes", hours: "08:00 – 18:30" },
     { days: "Sábado", hours: "08:30 – 14:30" },
