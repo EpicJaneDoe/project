@@ -62,11 +62,11 @@ export const services = [
     // TODO: Confirmar nombre oficial del servicio.
     title: "Seguridad electrónica",
     description:
-      "Sistemas de seguridad electrónica para proteger hogares, comercios e industrias con soluciones confiables.",
+      "Instalamos sistemas de seguridad electrónica completos: cercos eléctricos, sistemas de seguridad y video vigilancia para proteger hogares, comercios e industrias con soluciones confiables.",
   },
   {
     id: "video-vigilancia",
-    icon: "panel",
+    icon: "camera",
     // TODO: Confirmar nombre oficial del servicio.
     title: "Video vigilancia",
     description:
@@ -125,7 +125,7 @@ export const whyUsItems = [
   },
 ];
 
-// Proceso de trabajo en 4 pasos.
+// Proceso de trabajo en 5 pasos.
 export const processSteps = [
   {
     number: "01",
@@ -144,6 +144,11 @@ export const processSteps = [
   },
   {
     number: "04",
+    title: "Recibir la aprobación",
+    text: "Una vez presentada la propuesta o cotización, recibimos la aprobación del cliente antes de iniciar el trabajo.",
+  },
+  {
+    number: "05",
     title: "Ejecución",
     text: "Se coordina y realiza el trabajo correspondiente.",
   },
