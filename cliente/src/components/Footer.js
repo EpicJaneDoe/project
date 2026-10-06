@@ -12,8 +12,8 @@ export default function Footer() {
           <a className="lp-brand" href="#inicio">
             <BrandLogo className="brand-logo--nav" />
             <span className="lp-brand-text">
-              <strong>A G. ELECTRIC</strong>
-              <small>SOLUTIONS ECUADOR</small>
+              <strong>A .G Electrics Solutions</strong>
+              <small>Ecuador</small>
             </span>
           </a>
           <p>{company.slogan}</p>

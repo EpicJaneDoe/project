@@ -1,12 +1,10 @@
 import React from "react";
 import Icon from "./Icon";
 import { company, buildWhatsAppLink } from "../data/company";
+import heroImage from "../assets/images/portada.jpeg";
 
-// Imagen ilustrativa GENÉRICA (Unsplash). No representa trabajos reales de la empresa.
-// TODO: Reemplazar por fotografías reales de A G. Electric Solutions Ecuador
-// (colocarlas en src/assets o public/img y actualizar esta ruta).
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=70";
+// Imagen principal: fotografía real de la empresa (project/imagenes/Portada.jpeg).
+const HERO_IMAGE = heroImage;
 
 export default function Hero() {
   return (
@@ -17,17 +15,18 @@ export default function Hero() {
             <Icon name="bolt" size={16} /> {company.category} · {company.location}
           </span>
           <h1>
-            Soluciones eléctricas <em>para tus proyectos</em>
+            Instalaciones eléctricas y <em>seguridad electrónica</em>
           </h1>
           <p>
-            Servicios e instalaciones eléctricas con atención profesional en
-            San Antonio de Pichincha y Quito.
+            Servicios e instalaciones eléctricas, seguridad electrónica,
+            sistemas de video vigilancia y cercos eléctricos con atención
+            profesional en San Antonio de Pichincha y Quito.
           </p>
           <div className="lp-hero-actions">
             <a
               className="lp-btn lp-btn-whatsapp"
               href={buildWhatsAppLink(
-                "Hola, me interesa información sobre los servicios eléctricos de A G. Electric Solutions Ecuador."
+                "Hola, me interesa información sobre los servicios eléctricos y de seguridad electrónica de A G. Electric Solutions Ecuador."
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -41,10 +40,10 @@ export default function Hero() {
         </div>
 
         <div className="lp-hero-media">
-          {/* IMAGEN PROVISIONAL: reemplazar por fotos reales de la empresa. */}
+          {/* Fotografía real de la empresa. */}
           <img
             src={HERO_IMAGE}
-            alt="Instalación eléctrica profesional: tablero y cableado ordenado (imagen ilustrativa)"
+            alt="Instalaciones eléctricas y sistemas de seguridad electrónica de A .G Electrics Solutions Ecuador"
             loading="eager"
           />
           <div className="lp-hero-card" aria-hidden="true">

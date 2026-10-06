@@ -12,7 +12,7 @@ export default function Services() {
       <div className="lp-container">
         <SectionHeading
           kicker="Servicios"
-          title="Soluciones eléctricas para cada necesidad"
+          title="Soluciones eléctricas y de seguridad para cada necesidad"
           description="Cada proyecto es distinto. Cuéntanos qué necesitas y definimos juntos el alcance del trabajo."
           id="services-title"
         />

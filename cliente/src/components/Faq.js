@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "¿Con qué tipo de proyectos trabajan?",
-    a: "Somos un servicio de instalación eléctrica orientado a soluciones e instalaciones eléctricas. Para conocer el alcance exacto de tu proyecto —tamaño, espacio o necesidad— escríbenos y lo evaluamos contigo.",
+    a: "Trabajamos instalaciones eléctricas y, además, seguridad electrónica: sistemas de video vigilancia, cercos eléctricos y sistemas de seguridad. Para conocer el alcance exacto de tu proyecto —tamaño, espacio o necesidad— escríbenos y lo evaluamos contigo.",
   },
   {
     q: "¿La cotización tiene algún compromiso?",

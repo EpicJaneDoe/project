@@ -54,7 +54,31 @@ export const services = [
     // TODO: Confirmar nombre oficial del servicio.
     title: "Asesoría para proyectos",
     description:
-      "Acompañamiento técnico para definir el alcance eléctrico de su proyecto antes de ejecutarlo.",
+      "Acompañamiento técnico para definir el alcance eléctrico y de seguridad de su proyecto antes de ejecutarlo.",
+  },
+  {
+    id: "seguridad-electronica",
+    icon: "shield",
+    // TODO: Confirmar nombre oficial del servicio.
+    title: "Seguridad electrónica",
+    description:
+      "Sistemas de seguridad electrónica para proteger hogares, comercios e industrias con soluciones confiables.",
+  },
+  {
+    id: "video-vigilancia",
+    icon: "panel",
+    // TODO: Confirmar nombre oficial del servicio.
+    title: "Video vigilancia",
+    description:
+      "Instalación de sistemas de video vigilancia y cámaras para monitorear sus espacios en tiempo real.",
+  },
+  {
+    id: "cercos-electricos",
+    icon: "bolt",
+    // TODO: Confirmar nombre oficial del servicio.
+    title: "Cercos eléctricos",
+    description:
+      "Montaje de cercos eléctricos como barrera de seguridad perimetral para sus propiedades.",
   },
 ];
 
@@ -62,6 +86,7 @@ export const services = [
 export const trustItems = [
   { icon: "handshake", label: "Atención personalizada" },
   { icon: "bolt", label: "Soluciones eléctricas" },
+  { icon: "shield", label: "Seguridad electrónica" },
   { icon: "pin", label: "Ubicación en Quito" },
   { icon: "phone", label: "Contacto directo" },
 ];
