@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -85,7 +85,105 @@ const projects = [
   },
 ];
 
+// =============================================================
+// GALERÍA / MODAL — al hacer click en una tarjeta se abre un
+// modal centrado que muestra EXCLUSIVAMENTE las imágenes del
+// proyecto seleccionado, empezando por su primera imagen.
+// Navegación: botones avanzar/retroceder, teclado (← → Esc),
+// click fuera y botón de cerrar. Funciona en escritorio y móvil.
+// =============================================================
+function ProjectGallery({ project, onClose }) {
+  const [index, setIndex] = useState(0);
+
+  const prev = useCallback(
+    () => setIndex((i) => (i - 1 + project.images.length) % project.images.length),
+    [project.images.length]
+  );
+  const next = useCallback(
+    () => setIndex((i) => (i + 1) % project.images.length),
+    [project.images.length]
+  );
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") onClose();
+      else if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") next();
+    };
+    window.addEventListener("keydown", onKey);
+    // Bloquea el scroll del fondo mientras el modal está abierto
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [onClose, prev, next]);
+
+  return (
+    <div
+      className="lp-gallery-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Galería: ${project.title}`}
+      onClick={onClose}
+    >
+      <div className="lp-gallery" onClick={(e) => e.stopPropagation()}>
+        <button
+          type="button"
+          className="lp-gallery-close"
+          aria-label="Cerrar galería"
+          onClick={onClose}
+        >
+          ×
+        </button>
+
+        <div className="lp-gallery-header">
+          <span>{project.category}</span>
+          <h3>{project.title}</h3>
+        </div>
+
+        <div className="lp-gallery-stage">
+          <button
+            type="button"
+            className="lp-gallery-nav lp-gallery-prev"
+            aria-label="Imagen anterior"
+            onClick={prev}
+            disabled={project.images.length < 2}
+          >
+            ‹
+          </button>
+
+          <img
+            src={project.images[index]}
+            alt={`${project.title} — Imagen ${index + 1} de ${project.images.length}`}
+          />
+
+          <button
+            type="button"
+            className="lp-gallery-nav lp-gallery-next"
+            aria-label="Imagen siguiente"
+            onClick={next}
+            disabled={project.images.length < 2}
+          >
+            ›
+          </button>
+        </div>
+
+        <div className="lp-gallery-footer">
+          <p>{project.work.join(" ")}</p>
+          <span className="lp-gallery-counter">
+            {index + 1} / {project.images.length}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Projects() {
+  const [selected, setSelected] = useState(null);
+
   return (
     <section id="proyectos" className="lp-section lp-projects" aria-labelledby="projects-title">
       <div className="lp-container">
@@ -99,7 +197,14 @@ export default function Projects() {
         <div className="lp-cards-grid">
           {projects.map((project, index) => (
             <Reveal as="article" key={project.id} className="lp-project-card" delay={index * 60}>
-              <img src={project.images[0]} alt={project.title} loading="lazy" />
+              <button
+                type="button"
+                className="lp-project-card-open"
+                aria-label={`Ver galería de ${project.title}`}
+                onClick={() => setSelected(project)}
+              >
+                <img src={project.images[0]} alt={project.title} loading="lazy" />
+              </button>
               <div>
                 <span>{project.category}</span>
                 <h3>{project.title}</h3>
@@ -109,6 +214,10 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {selected && (
+        <ProjectGallery project={selected} onClose={() => setSelected(null)} />
+      )}
     </section>
   );
 }
