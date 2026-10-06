@@ -49,16 +49,6 @@ export default function Contact() {
               </div>
 
               <div className="lp-info-row">
-                <Icon name="phone" size={20} />
-                <div>
-                  <strong>Teléfono</strong>
-                  <p>
-                    <a href={`tel:${company.phoneRaw}`}>{company.phone}</a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="lp-info-row">
                 <Icon name="whatsapp" size={20} />
                 <div>
                   <strong>WhatsApp</strong>

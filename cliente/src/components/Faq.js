@@ -8,7 +8,7 @@ import Icon from "./Icon";
 const faqs = [
   {
     q: "¿Cómo puedo solicitar información o una cotización?",
-    a: "Puedes escribirnos por WhatsApp al +593 98 342 9670, llamarnos por teléfono o completar el formulario de esta página. Cuéntanos qué necesitas y te orientaremos sobre los siguientes pasos.",
+    a: "Puedes escribirnos por WhatsApp al +593 98 342 9670 o llamarnos por teléfono. Cuéntanos qué necesitas y te orientaremos sobre los siguientes pasos.",
   },
   {
     q: "¿Dónde están ubicados?",
