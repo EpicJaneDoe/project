@@ -1,20 +1,89 @@
 import React from "react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import Icon from "./Icon";
+
+
+import casaAgave1 from "../assets/images/proyectos/casa-agave/primera.jpg";
+import casaAgave2 from "../assets/images/proyectos/casa-agave/segunda.jpg";
+import casaAgave3 from "../assets/images/proyectos/casa-agave/tercera.jpg";
+import casaAgave4 from "../assets/images/proyectos/casa-agave/cuarta.jpg";
+
+import motores1 from "../assets/images/proyectos/motores/primera.jpg";
+import motores2 from "../assets/images/proyectos/motores/segunda.jpg";
+import motores3 from "../assets/images/proyectos/motores/tercera.jpg";
+import motores4 from "../assets/images/proyectos/motores/cuarta.jpg";
+
+import kaynu1 from "../assets/images/proyectos/kaynu/primera.jpg";
+import kaynu2 from "../assets/images/proyectos/kaynu/segunda.jpg";
+import kaynu3 from "../assets/images/proyectos/kaynu/tercera.jpg";
+
+import chorigol1 from "../assets/images/proyectos/chorigol/primera.jpg";
+import chorigol2 from "../assets/images/proyectos/chorigol/segunda.jpg";
+import chorigol3 from "../assets/images/proyectos/chorigol/tercera.jpg";
+
+import lamiske1 from "../assets/images/proyectos/lamiske/primera.jpg";
+import lamiske2 from "../assets/images/proyectos/lamiske/segunda.jpg";
+import lamiske3 from "../assets/images/proyectos/lamiske/tercera.jpg";
+import lamiske4 from "../assets/images/proyectos/lamiske/cuarta.jpg";
+import lamiske5 from "../assets/images/proyectos/lamiske/quinta.jpg";
+import lamiske6 from "../assets/images/proyectos/lamiske/sexta.jpg";
+import lamiske7 from "../assets/images/proyectos/lamiske/septima.jpg";
 
 // =============================================================
-// GALERÍA DE PROYECTOS — ESTRUCTURA PREPARADA.
-// La empresa aún no publica un catálogo confirmado de proyectos,
-// por lo que NO se inventan obras ni se atribuyen fotos genéricas
-// como trabajos reales de A G. Electric Solutions Ecuador.
-//
-// TODO: Para publicar proyectos reales, agrega las fotografías en
-// public/img/proyectos/ y completa este array con la autorización
-// de la empresa, por ejemplo:
-// { image: "/img/proyectos/tablero-quit.jpg", title: "...", category: "...", description: "..." }
+// GALERÍA DE PROYECTOS — Proyectos reales de A .G Electrics
+// Solutions Ecuador. Cada proyecto usa su primera imagen en la
+// tarjeta principal; el resto queda organizado para la futura
+// galería/modal.
 // =============================================================
-const projects = [];
+const projects = [
+  {
+    id: "casa-agave",
+    title: "Proyecto Casa Agave",
+    category: "Instalaciones eléctricas y seguridad",
+    work: [
+      "Circuito de fuera.",
+      "Iluminación.",
+      "Sistema de video vigilancia.",
+      "Sistema contra incendios.",
+    ],
+    images: [casaAgave1, casaAgave2, casaAgave3, casaAgave4],
+  },
+  {
+    id: "motores-sauces",
+    title:
+      "Proyecto instalación de motores tipo brazo y mantenimiento preventivo de motores de cremallera en Urbanización Los Sauces, La Pampa",
+    category: "Motores y automatización",
+    work: [
+      "Instalación de motores tipo brazo.",
+      "Mantenimiento preventivo de motores de cremallera.",
+    ],
+    images: [motores1, motores2, motores3, motores4],
+  },
+  {
+    id: "tienda-kaynu",
+    title: "Proyecto tienda de productos naturales Kaynu",
+    category: "Iluminación y fuerza",
+    work: ["Sistema de iluminación y fuerza.", "Rótulos luminosos."],
+    images: [kaynu1, kaynu2, kaynu3],
+  },
+  {
+    id: "chorigol",
+    title: "Proyecto Chorigol",
+    category: "Iluminación y fuerza",
+    work: ["Sistema de iluminación y fuerza de todo el local."],
+    images: [chorigol1, chorigol2, chorigol3],
+  },
+  {
+    id: "la-miske",
+    title: "Proyecto La Miske",
+    category: "Instalaciones eléctricas y video vigilancia",
+    work: [
+      "Instalación del sistema de iluminación y fuerza de todo el local.",
+      "Sistema de video vigilancia.",
+    ],
+    images: [lamiske1, lamiske2, lamiske3, lamiske4, lamiske5, lamiske6, lamiske7],
+  },
+];
 
 export default function Projects() {
   return (
@@ -22,40 +91,23 @@ export default function Projects() {
       <div className="lp-container">
         <SectionHeading
           kicker="Proyectos y galería"
-          title="Pronto mostraremos nuestro trabajo"
-          description="Estamos preparando esta sección para mostrar proyectos reales ejecutados por el equipo. Mientras tanto, puedes conocernos mejor o solicitar información sobre tu proyecto."
+          title="Proyectos reales de nuestro trabajo"
+          description="Instalaciones eléctricas, seguridad electrónica y video vigilancia ejecutadas por el equipo de A .G Electrics Solutions."
           id="projects-title"
         />
 
-        {projects.length === 0 ? (
-          <Reveal className="lp-gallery-placeholder">
-            <span className="lp-gallery-icon" aria-hidden="true">
-              <Icon name="panel" size={34} />
-            </span>
-            <h3>Espacio reservado para fotografías reales</h3>
-            <p>
-              Aquí se mostrarán imágenes de instalaciones y proyectos propios de{" "}
-              <strong>A G. Electric Solutions Ecuador</strong>. No utilizamos
-              fotografías ajenas como si fueran nuestras.
-            </p>
-            <div className="lp-gallery-slots" aria-hidden="true">
-              <span /><span /><span /><span />
-            </div>
-          </Reveal>
-        ) : (
-          <div className="lp-cards-grid">
-            {projects.map((project, index) => (
-              <Reveal as="article" key={project.title} className="lp-project-card" delay={index * 60}>
-                <img src={project.image} alt={project.title} loading="lazy" />
-                <div>
-                  <span>{project.category}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        )}
+        <div className="lp-cards-grid">
+          {projects.map((project, index) => (
+            <Reveal as="article" key={project.id} className="lp-project-card" delay={index * 60}>
+              <img src={project.images[0]} alt={project.title} loading="lazy" />
+              <div>
+                <span>{project.category}</span>
+                <h3>{project.title}</h3>
+                <p>{project.work.join(" ")}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
