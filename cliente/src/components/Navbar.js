@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BrandLogo from "./BrandLogo";
 import Icon from "./Icon";
+import BackToMainMenuButton from "./BackToMainMenuButton";
 import { company } from "../data/company";
 
 // Navbar de la landing: enlaces por ancla.
@@ -64,6 +65,9 @@ export default function Navbar() {
             <Icon name="whatsapp" size={18} /> Contáctanos por WhatsApp
           </a>
         </nav>
+
+        {/* Botón "Volver al menú principal": elemento adicional al extremo derecho del header. */}
+        <BackToMainMenuButton inHeader />
 
         <div className="lp-nav-actions">
           <button
