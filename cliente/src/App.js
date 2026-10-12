@@ -4,6 +4,7 @@ import './App.css';
 import './styles/landing.css';
 
 import MenuNavegacion from './MenuNavegacion';
+import BackToMainMenuButton from './components/BackToMainMenuButton';
 import Landing from './pages/Landing';
 import Bienvenida from './Menu/Bienvenida';
 import AcercaDe from './Menu/AcercaDe';
@@ -27,6 +28,8 @@ function InternalLayout() {
     <>
       <MenuNavegacion />
       <main className="app-main">
+        {/* Botón de regreso al menú principal: debajo del header, sin alterarlo. */}
+        <BackToMainMenuButton />
         <Outlet />
       </main>
     </>
