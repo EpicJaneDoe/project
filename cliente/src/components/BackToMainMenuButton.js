@@ -7,7 +7,7 @@ import { MENU_PRINCIPAL_URL } from '../config/menuPrincipal';
 // La URL se define en un único lugar: src/config/menuPrincipal.js.
 // Mientras no esté configurada, el botón se muestra deshabilitado y accesible,
 // sin navegar, recargar ni modificar la URL actual.
-export default function BackToMainMenuButton() {
+export default function BackToMainMenuButton({ inHeader = false } = {}) {
   const navigate = useNavigate();
   const isConfigured = Boolean(MENU_PRINCIPAL_URL);
 
@@ -22,7 +22,7 @@ export default function BackToMainMenuButton() {
   };
 
   return (
-    <div className="back-to-menu">
+    <div className={inHeader ? "back-to-menu back-to-menu--header" : "back-to-menu"}>
       <button
         type="button"
         className="back-to-menu__button"

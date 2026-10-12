@@ -92,6 +92,14 @@
 .lp-nav-actions { display: flex; align-items: center; gap: 12px; }
 .lp-burger { display: none; }
 
+/* Botón "Volver al menú principal" integrado en el header de la landing (extremo derecho). */
+.lp-nav .back-to-menu { max-width: none; margin: 0; padding: 0; flex-shrink: 0; }
+.lp-nav .back-to-menu__button { font-size: 13px; white-space: nowrap; }
+@media (max-width: 760px) {
+  /* En móvil se conserva visible junto a la marca, con tamaño reducido para no romper el header. */
+  .lp-nav .back-to-menu__button { gap: 6px; padding: 8px 10px; font-size: 11px; border-radius: 8px; }
+}
+
 /* ---------- HERO ---------- */
 .lp-hero { position: relative; overflow: hidden; padding: 160px 0 100px; background: radial-gradient(900px 480px at 82% 10%, rgba(17, 65, 209, .35), transparent 60%), linear-gradient(160deg, var(--primary-dark) 0%, #0a2f7d 55%, var(--text-primary) 130%); color: #fff; }
 /* Marca de agua sutil del logo oficial en el hero (asset original, sin filtros) */
